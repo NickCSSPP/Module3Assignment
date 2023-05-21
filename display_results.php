@@ -49,17 +49,19 @@
                 <h1>Order Summary</h1>
                 <p>Cost of Shoes: $<?php echo $cost; ?></p>
                 <p>Quantity: <?php echo $quantity; ?></p>
-                    <?php if ($waterproof) { ?>
-                        <p>Waterproof: Yes</p>
-                     <?php } else { 
-                        ?><p>Waterproof: No</p>
-                    <?php } ?>
-                    <?php if ($member) { ?>
-                        <p>Member Discount: $<?php echo $discount; ?></p>
-                    <?php } ?>
+                <?php 
+                if ($waterproof) { 
+                    echo "<p>Waterproof: Yes</p>";
+                } else { 
+                    echo "<p>Waterproof: No</p>";
+                } 
+                if ($member) { 
+                     ?>
+                    <p>Member Discount: $<?php echo $discount; ?></p>
+                    <?php
+                } 
+                ?>
                 <p>Total Cost: $<?php echo $total_cost; ?></p>
             </main>
-        </div>
-    </div>
-</body>
+        </body>
 </html>
